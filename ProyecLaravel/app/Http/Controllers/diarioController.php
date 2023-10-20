@@ -23,7 +23,9 @@ class diarioController extends Controller
 
     public function guardarRecuerdo(validateDiarioForm $req){
 
-        return $req->all();
+        return redirect('/form')->with('confirmacion','Tus datos llegaron al controlador');
+    
+        //return $req->all();
 
 
     /*$validated = $req->validate([

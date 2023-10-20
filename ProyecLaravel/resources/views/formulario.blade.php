@@ -9,6 +9,16 @@
 
 <div class="container mt-5 col-md-6">
 
+  
+  @if (session()->has('confirmacion'))
+
+   <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+   <strong>{{session('confirmacion')}}</strong>
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+@endif
+
+
 <div class="card ">
 
     <div class="card-header fs-4 fw-medium text-primary text-center">
