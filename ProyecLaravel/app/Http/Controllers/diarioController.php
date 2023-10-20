@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validateDiarioForm;
+
 
 class diarioController extends Controller
 {
@@ -19,11 +21,19 @@ class diarioController extends Controller
         return view('recuerdos');
     }
 
-    public function guardarRecuerdo(Request $req){
+    public function guardarRecuerdo(validateDiarioForm $req){
 
-        //return $req->all();
+        return $req->all();
 
-        echo "<p>";
+
+    /*$validated = $req->validate([
+            'txtTitulo' => 'required|max:255',
+            'txtRecuerdo' => 'required|min:5',
+        ]); */
+
+      
+
+        /* echo "<p>";
         echo $req->ip();
         echo " - ";
         echo $req->path();
@@ -33,7 +43,7 @@ class diarioController extends Controller
         echo $req->input('txtTitulo');
         echo " - ";
         echo $req->url();
-        echo"</p>";
+        echo"</p>"; */
 
 
 
